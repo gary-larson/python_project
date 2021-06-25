@@ -1,0 +1,139 @@
+2021-06-24 14:24:43,809 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:27:40,673 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:29:23,725 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:32:01,425 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:44:52,554 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:46:04,321 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:47:36,450 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 14:48:40,527 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:01:59,718 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:03:49,099 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:07:11,568 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:18:12,456 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:19:37,870 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:21:49,751 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:23:00,049 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:32:23,627 - data.setup:22 - ERROR - Could not connect to Mongo
+Traceback (most recent call last):
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\data\setup.py", line 18, in setup_mongo
+    print(_db.list_collection_names({}))
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\database.py", line 863, in list_collection_names
+    for result in self.list_collections(session=session, **kwargs)]
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\database.py", line 825, in list_collections
+    return self.__client._retryable_read(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\mongo_client.py", line 1460, in _retryable_read
+    server = self._select_server(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\mongo_client.py", line 1278, in _select_server
+    server = topology.select_server(server_selector)
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 60d4ebb919446f54b5dc327e, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+2021-06-24 15:33:48,991 - data.setup:22 - ERROR - Could not connect to Mongo
+Traceback (most recent call last):
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\data\setup.py", line 18, in setup_mongo
+    print(_db.list_collection_names({}))
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\database.py", line 863, in list_collection_names
+    for result in self.list_collections(session=session, **kwargs)]
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\database.py", line 825, in list_collections
+    return self.__client._retryable_read(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\mongo_client.py", line 1460, in _retryable_read
+    server = self._select_server(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\mongo_client.py", line 1278, in _select_server
+    server = topology.select_server(server_selector)
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 60d4ec0e07a7a984fe3ddb4a, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+2021-06-24 15:35:00,579 - data.setup:23 - ERROR - Could not connect to Mongo
+Traceback (most recent call last):
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\data\setup.py", line 16, in setup_mongo
+    print('\n\n' + os.environ.get("MONGO_URI") + '\n\n')
+TypeError: can only concatenate str (not "NoneType") to str
+2021-06-24 15:37:13,664 - data.setup:23 - ERROR - Could not connect to Mongo
+Traceback (most recent call last):
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\data\setup.py", line 19, in setup_mongo
+    print(_db.list_collection_names({}))
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\database.py", line 863, in list_collection_names
+    for result in self.list_collections(session=session, **kwargs)]
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\database.py", line 825, in list_collections
+    return self.__client._retryable_read(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\mongo_client.py", line 1460, in _retryable_read
+    server = self._select_server(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\mongo_client.py", line 1278, in _select_server
+    server = topology.select_server(server_selector)
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "C:\Users\Gary\OneDrive\Revature\Training\Python Project\covid\lib\site-packages\pymongo\topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it, Timeout: 30s, Topology Description: <TopologyDescription id: 60d4ecdbb6e8eeb3af6d1627, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it')>]>
+2021-06-24 15:38:31,619 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:39:33,198 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:41:17,576 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:47:00,562 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:48:24,326 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 15:50:54,922 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 16:02:54,857 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 16:13:50,623 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 16:16:27,586 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 16:17:07,865 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 16:18:48,651 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-24 16:35:14,361 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 09:22:28,230 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 10:08:41,339 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 10:09:30,705 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 10:13:17,366 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 10:14:08,612 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:01:44,282 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:01:44,310 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:08:03,915 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:08:03,944 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:08:03,974 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:33:56,980 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:33:57,016 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:38:45,506 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:38:45,535 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:40:28,624 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:40:28,658 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:41:59,665 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:41:59,693 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:50:20,666 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:50:20,694 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:57:49,400 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:57:49,431 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:59:47,030 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 11:59:47,058 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:01:57,244 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:01:57,301 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:04:34,784 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:04:34,832 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:09:43,093 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:09:43,125 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:11:04,685 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:11:04,730 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:12:59,576 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:12:59,618 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:18:15,628 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 12:18:15,697 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:40:05,702 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:40:05,733 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:47:28,745 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:47:28,776 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:48:42,863 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:48:42,898 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:51:23,569 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:51:23,605 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:54:43,724 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:54:43,754 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:56:35,240 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 14:56:35,273 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 16:13:33,164 - data.mongo_utility:16 - INFO - made connection to database
+2021-06-25 16:13:33,201 - data.mongo_utility:16 - INFO - made connection to database

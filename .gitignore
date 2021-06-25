@@ -1,0 +1,6 @@
+# "Compiled" python code that is generated to make future executions faster
+**/__pycache__/
+**/Include/
+**/Lib/
+**/Scripts/
+pyvenv.cfg
